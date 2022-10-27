@@ -526,6 +526,9 @@ video {
 .w-\[250px\] {
   width: 250px;
 }
+.flex-shrink {
+  flex-shrink: 1;
+}
 .translate-x-full {
   --tw-translate-x: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -663,16 +666,30 @@ video {
 }
 @media (min-width: 1440px) {
 
+  .desktop\:absolute {
+    position: absolute;
+  }
+
   .desktop\:relative {
     position: relative;
   }
 
-  .desktop\:mt-0 {
-    margin-top: 0px;
+  .desktop\:my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
-  .desktop\:block {
-    display: block;
+  .desktop\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .desktop\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .desktop\:mb-20 {
+    margin-bottom: 5rem;
   }
 
   .desktop\:flex {
@@ -683,20 +700,37 @@ video {
     display: none;
   }
 
-  .desktop\:w-full {
-    width: 100%;
+  .desktop\:h-\[30\%\] {
+    height: 30%;
   }
 
   .desktop\:w-\[30\%\] {
     width: 30%;
   }
 
+  .desktop\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .desktop\:w-\[50\%\] {
+    width: 50%;
+  }
+
   .desktop\:max-w-full {
     max-width: 100%;
   }
 
-  .desktop\:shrink {
-    flex-shrink: 1;
+  .desktop\:flex-1 {
+    flex: 1 1 0%;
+  }
+
+  .desktop\:translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .desktop\:flex-row {
+    flex-direction: row;
   }
 
   .desktop\:flex-row-reverse {
@@ -711,22 +745,32 @@ video {
     justify-content: flex-start;
   }
 
-  .desktop\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0px * var(--tw-space-x-reverse));
-    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  .desktop\:justify-end {
+    justify-content: flex-end;
   }
 
-  .desktop\:p-8 {
-    padding: 2rem;
+  .desktop\:space-x-20 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(5rem * var(--tw-space-x-reverse));
+    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .desktop\:p-0 {
+    padding: 0px;
   }
 
   .desktop\:p-\[8rem\] {
     padding: 8rem;
   }
 
-  .desktop\:p-0 {
-    padding: 0px;
+  .desktop\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .desktop\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .desktop\:text-left {
@@ -738,8 +782,8 @@ video {
     line-height: 1;
   }
 
-  .desktop\:text-lg {
-    font-size: 1.125rem;
+  .desktop\:text-xl {
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
