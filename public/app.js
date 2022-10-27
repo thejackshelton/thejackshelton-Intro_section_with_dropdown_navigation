@@ -33,10 +33,22 @@ companyButton.addEventListener("click", () => {
   companyDiv.classList.toggle("hidden");
   companyUpArrow.classList.toggle("hidden");
   companyDownArrow.classList.toggle("hidden");
+
+  // Setting aria-expanded for accessibility
+  companyButton.setAttribute(
+    "aria-expanded",
+    companyButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
 });
 
 featuresButton.addEventListener("click", () => {
   featuresDiv.classList.toggle("hidden");
   featuresUpArrow.classList.toggle("hidden");
   featuresDownArrow.classList.toggle("hidden");
+
+  // Setting aria-expanded for accessibility
+  featuresButton.setAttribute(
+    "aria-expanded",
+    featuresButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
 });
