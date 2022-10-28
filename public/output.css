@@ -469,9 +469,6 @@ video {
 .fixed {
   position: fixed;
 }
-.absolute {
-  position: absolute;
-}
 .relative {
   position: relative;
 }
@@ -489,9 +486,6 @@ video {
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
-}
-.col-span-4 {
-  grid-column: span 4 / span 4;
 }
 .my-4 {
   margin-top: 1rem;
@@ -517,6 +511,12 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
 .flex {
   display: flex;
 }
@@ -539,6 +539,10 @@ video {
   --tw-translate-x: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.rotate-180 {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -559,9 +563,6 @@ video {
 }
 .gap-8 {
   gap: 2rem;
-}
-.gap-6 {
-  gap: 1.5rem;
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -675,14 +676,6 @@ video {
 }
 @media (min-width: 1440px) {
 
-  .desktop\:static {
-    position: static;
-  }
-
-  .desktop\:absolute {
-    position: absolute;
-  }
-
   .desktop\:relative {
     position: relative;
   }
@@ -691,26 +684,14 @@ video {
     grid-column: span 4 / span 4;
   }
 
-  .desktop\:col-span-6 {
-    grid-column: span 6 / span 6;
-  }
-
-  .desktop\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
-  .desktop\:col-span-10 {
-    grid-column: span 10 / span 10;
+  .desktop\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .desktop\:my-10 {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-  }
-
-  .desktop\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .desktop\:mt-20 {
@@ -762,10 +743,6 @@ video {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .desktop\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
   .desktop\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -800,25 +777,16 @@ video {
     margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .desktop\:bg-white {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
-
   .desktop\:bg-transparent {
     background-color: transparent;
   }
 
-  .desktop\:bg-none {
-    background-image: none;
+  .desktop\:p-\[8rem\] {
+    padding: 8rem;
   }
 
   .desktop\:p-0 {
     padding: 0px;
-  }
-
-  .desktop\:p-\[8rem\] {
-    padding: 8rem;
   }
 
   .desktop\:px-6 {

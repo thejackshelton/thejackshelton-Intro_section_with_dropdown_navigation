@@ -1,54 +1,56 @@
 // Menu
-const openIcon = document.querySelector("#open-icon");
-const closeIcon = document.querySelector("#close-icon");
+const openButton = document.querySelector("#open-button");
+const closeButton = document.querySelector("#close-button");
 const openMenu = document.querySelector("#open-menu");
 const body = document.querySelector("body");
 
 //Menu Items
 const companyDiv = document.querySelector("#company-div");
-const companyButton = document.querySelector("#company-button");
+const companyLI = document.querySelector("#company-li");
 const featuresDiv = document.querySelector("#features-div");
-const featuresButton = document.querySelector("#features-button");
-const companyUpArrow = document.querySelector("#company-up-arrow");
+const featuresLI = document.querySelector("#features-li");
 const companyDownArrow = document.querySelector("#company-down-arrow");
-const featuresUpArrow = document.querySelector("#features-up-arrow");
 const featuresDownArrow = document.querySelector("#features-down-arrow");
 
-openIcon.addEventListener("click", () => {
+openButton.addEventListener("click", () => {
   openMenu.classList.toggle("translate-x-full");
-  openIcon.classList.toggle("hidden");
-  closeIcon.classList.toggle("hidden");
+  openButton.classList.toggle("hidden");
+  closeButton.classList.toggle("hidden");
   body.style.background = "rgba(0, 0, 0, 0.6)";
   body.style.transition = "all .5s";
-});
-
-closeIcon.addEventListener("click", () => {
-  openMenu.classList.toggle("translate-x-full");
-  openIcon.classList.toggle("hidden");
-  closeIcon.classList.toggle("hidden");
-  body.style.background = "none";
-});
-
-companyButton.addEventListener("click", () => {
-  companyDiv.classList.toggle("hidden");
-  companyUpArrow.classList.toggle("hidden");
-  companyDownArrow.classList.toggle("hidden");
 
   // Setting aria-expanded for accessibility
-  companyButton.setAttribute(
+  openButton.setAttribute(
     "aria-expanded",
-    companyButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    openButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
   );
 });
 
-featuresButton.addEventListener("click", () => {
-  featuresDiv.classList.toggle("hidden");
-  featuresUpArrow.classList.toggle("hidden");
-  featuresDownArrow.classList.toggle("hidden");
+closeButton.addEventListener("click", () => {
+  openMenu.classList.toggle("translate-x-full");
+  openButton.classList.toggle("hidden");
+  closeButton.classList.toggle("hidden");
+  body.style.background = "none";
+});
+
+companyLI.addEventListener("click", () => {
+  companyDiv.classList.toggle("hidden");
+  companyDownArrow.classList.toggle("rotate-180");
 
   // Setting aria-expanded for accessibility
-  featuresButton.setAttribute(
+  companyLI.setAttribute(
     "aria-expanded",
-    featuresButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    companyLI.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
+});
+
+featuresLI.addEventListener("click", () => {
+  featuresDiv.classList.toggle("hidden");
+  featuresDownArrow.classList.toggle("rotate-180");
+
+  // Setting aria-expanded for accessibility
+  featuresLI.setAttribute(
+    "aria-expanded",
+    featuresLI.getAttribute("aria-expanded") === "true" ? "false" : "true"
   );
 });
