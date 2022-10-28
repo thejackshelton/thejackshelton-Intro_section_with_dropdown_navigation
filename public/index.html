@@ -36,7 +36,9 @@
   <body>
     <main>
       <nav>
-        <div class="flex justify-between p-4">
+        <div
+          class="flex justify-between p-4 desktop:grid-cols-4 desktop:gap-6 desktop:grid"
+        >
           <!-- Logo -->
           <svg
             class="z-index"
@@ -50,7 +52,7 @@
             />
           </svg>
           <!-- Open -->
-          <div class="relative">
+          <div class="desktop:col-span-4 desktop:grid desktop:grid-cols-4">
             <svg
               role="Open Menu Icon"
               class="relative z-20 cursor-pointer desktop:hidden"
@@ -73,12 +75,12 @@
               alt="close menu icon"
             />
             <div
-              class="z-10 fixed bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0"
+              class="z-10 fixed bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent"
               id="open-menu"
               role="Opened Menu"
             >
-              <div class="">
-                <ul class="p-2 mt-4 text-mediumGray">
+              <div>
+                <ul class="p-2 mt-4 text-mediumGray desktop:flex">
                   <button
                     class="flex items-center my-4 space-x-4"
                     id="features-button"
@@ -203,7 +205,7 @@
               </div>
               <div>
                 <ul
-                  class="flex flex-col items-center text-mediumGray mt-[-1rem]"
+                  class="flex flex-col items-center text-mediumGray mt-[-1rem] desktop:flex-row"
                 >
                   <li class="my-4"><a href="#">Login</a></li>
                   <li>
