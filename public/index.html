@@ -37,8 +37,12 @@
     <main>
       <nav>
         <div class="flex justify-between p-4 desktop:block desktop:p-8">
-          <!-- Logo -->
-          <img src="./images/logo.svg" alt="Logo" />
+          <!-- Logo - classes for maintaining AR -->
+          <img
+            src="./images/logo.svg"
+            alt="Logo"
+            class="max-w-[84px] max-h-[27px]"
+          />
           <!-- Open -->
           <div>
             <button
@@ -65,7 +69,7 @@
             </button>
             <!-- Close -->
             <div
-              class="z-10 absolute bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent desktop:w-full"
+              class="z-10 absolute bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent desktop:w-full desktop:z-0"
               id="open-menu"
             >
               <div
