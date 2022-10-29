@@ -33,16 +33,14 @@
       }
     </style>
   </head>
-  <body>
+  <body class="desktop:bg-almostWhite">
     <main>
       <nav>
-        <div
-          class="flex justify-between p-4 desktop:grid-cols-4 desktop:gap-6 desktop:grid"
-        >
+        <div class="flex justify-between p-4 desktop:block desktop:p-8">
           <!-- Logo -->
           <img src="./images/logo.svg" alt="Logo" />
           <!-- Open -->
-          <div class="desktop:col-span-4 desktop:grid desktop:grid-cols-4">
+          <div>
             <button
               id="open-button"
               class="relative z-20 cursor-pointer desktop:hidden"
@@ -67,13 +65,17 @@
             </button>
             <!-- Close -->
             <div
-              class="z-10 fixed bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent"
+              class="z-10 absolute bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent desktop:w-full"
               id="open-menu"
             >
-              <div>
-                <ul class="p-2 mt-4 text-mediumGray desktop:flex">
+              <div
+                class="desktop:flex desktop:items-center desktop:justify-between"
+              >
+                <ul
+                  class="p-2 mt-4 text-mediumGray desktop:flex desktop:space-x-10 desktop:ml-40 desktop:mt-[-.5rem]"
+                >
                   <li
-                    class="flex items-center my-4 space-x-4 cursor-pointer"
+                    class="flex items-center my-4 space-x-4 cursor-pointer desktop:space-x-2"
                     id="features-li"
                     aria-expanded="false"
                   >
@@ -94,7 +96,10 @@
                       />
                     </svg>
                   </li>
-                  <div class="px-4 mt-[-.5rem] hidden" id="features-div">
+                  <div
+                    class="px-4 desktop:py-4 desktop:px-8 mt-[-.5rem] hidden desktop:absolute desktop:shadow-2xl desktop:rounded-xl desktop:mt-[3.5rem] desktop:left-[4rem] desktop:bg-white"
+                    id="features-div"
+                  >
                     <button class="flex items-center py-2 space-x-2">
                       <img
                         aria-hidden="true"
@@ -129,7 +134,7 @@
                     </button>
                   </div>
                   <li
-                    class="flex items-center my-4 space-x-4 cursor-pointer"
+                    class="flex items-center my-4 space-x-4 cursor-pointer desktop:space-x-2"
                     id="company-li"
                     aria-expanded="false"
                   >
@@ -150,22 +155,29 @@
                       />
                     </svg>
                   </li>
-                  <div class="hidden px-4" id="company-div">
+                  <div
+                    class="hidden px-4 desktop:absolute desktop:bg-white desktop:mt-[3.5rem] desktop:left-[17rem] desktop:px-6 desktop:py-4 desktop:rounded-xl desktop:shadow-2xl"
+                    id="company-div"
+                  >
                     <li class="py-2"><a href="#">History</a></li>
                     <li class="py-2"><a href="#">Our Team</a></li>
                     <li class="py-2"><a href="#">Blog</a></li>
                   </div>
                   <li class="my-4"><a href="#">Careers</a></li>
                   <li class="my-4"><a href="#">About</a></li>
-                  <div>
-                    <li class="flex justify-center my-4">
+                </ul>
+                <ul class="desktop:mt-[-.5rem] mr-5">
+                  <div class="desktop:flex desktop:space-x-10">
+                    <li
+                      class="flex justify-center my-4 desktop:my-0 desktop:space-x-4 desktop:items-center text-mediumGray"
+                    >
                       <a href="#">Login</a>
                     </li>
                     <li>
                       <button
-                        class="px-16 py-2 border-2 rounded-xl border-almostBlack"
+                        class="px-16 py-2 border-2 rounded-xl border-almostBlack desktop:px-6"
                       >
-                        Register
+                        <span class="text-mediumGray">Register</span>
                       </button>
                     </li>
                   </div>

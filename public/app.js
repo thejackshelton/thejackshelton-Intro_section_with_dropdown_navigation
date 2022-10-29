@@ -16,6 +16,7 @@ openButton.addEventListener("click", () => {
   openMenu.classList.toggle("translate-x-full");
   openButton.classList.toggle("hidden");
   closeButton.classList.toggle("hidden");
+
   body.style.background = "rgba(0, 0, 0, 0.6)";
   body.style.transition = "all .5s";
 
