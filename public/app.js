@@ -1,14 +1,14 @@
 // Menu
 const navButtons = document.querySelectorAll(
-  "#company-button",
-  "#features-button"
+  "#company-button, #features-button"
 );
+
 const openButton = document.querySelector("#open-button");
 const closeButton = document.querySelector("#close-button");
 const openMenu = document.querySelector("#open-menu");
 const body = document.querySelector("body");
 
-//Menu Items
+//  Menu Items
 const companyDiv = document.querySelector("#company-div");
 const companyButton = document.querySelector("#company-button");
 const featuresDiv = document.querySelector("#features-div");
@@ -22,26 +22,36 @@ for (let i = 0; i < navButtons.length; i++) {
       companyDiv.classList.toggle("hidden");
       companyDownArrow.classList.toggle("rotate-180");
 
-      // Setting aria-expanded for accessibility
       companyButton.setAttribute(
         "aria-expanded",
         companyButton.getAttribute("aria-expanded") === "true"
           ? "false"
           : "true"
       );
+
+      if (!featuresDiv.classList.contains("hidden")) {
+        featuresDiv.classList.toggle("hidden");
+        featuresDownArrow.classList.toggle("rotate-180");
+        featuresButton.setAttribute("aria-expanded", "false");
+      }
     }
 
     if (navButtons[i] === featuresButton) {
       featuresDiv.classList.toggle("hidden");
       featuresDownArrow.classList.toggle("rotate-180");
 
-      // Setting aria-expanded for accessibility
       featuresButton.setAttribute(
         "aria-expanded",
         featuresButton.getAttribute("aria-expanded") === "true"
           ? "false"
           : "true"
       );
+
+      if (!companyDiv.classList.contains("hidden")) {
+        companyDiv.classList.toggle("hidden");
+        companyDownArrow.classList.toggle("rotate-180");
+        companyButton.setAttribute("aria-expanded", "false");
+      }
     }
   });
 }
