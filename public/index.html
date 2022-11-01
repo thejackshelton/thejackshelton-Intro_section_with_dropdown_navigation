@@ -83,7 +83,7 @@
                       class="flex items-center my-4 space-x-4 cursor-pointer desktop:space-x-2"
                       id="features-button"
                     >
-                      <a href="#">Features</a>
+                      <span>Features</span>
                       <svg
                         aria-hidden="true"
                         id="features-down-arrow"
@@ -101,9 +101,9 @@
                       </svg>
                     </button>
                   </li>
-                  <div
+                  <li
                     class="px-4 desktop:py-4 desktop:px-8 mt-[-.5rem] hidden desktop:absolute desktop:shadow-2xl desktop:rounded-xl desktop:mt-[3.5rem] desktop:left-[4rem] desktop:bg-white"
-                    id="features-div"
+                    id="features-li"
                   >
                     <button class="flex items-center py-2 space-x-2">
                       <img
@@ -137,13 +137,13 @@
                       />
                       <span>Planning</span>
                     </button>
-                  </div>
+                  </li>
                   <li>
                     <button
                       class="flex items-center my-4 space-x-4 cursor-pointer desktop:space-x-2"
                       id="company-button"
                     >
-                      <a href="#">Company</a>
+                      <span>Company</span>
                       <svg
                         aria-hidden="true"
                         id="company-down-arrow"
@@ -161,32 +161,31 @@
                       </svg>
                     </button>
                   </li>
-                  <div
+                  <li
                     class="hidden px-4 desktop:absolute desktop:bg-white desktop:mt-[3.5rem] desktop:left-[17rem] desktop:px-6 desktop:py-4 desktop:rounded-xl desktop:shadow-2xl"
                     id="company-div"
                   >
-                    <li class="py-2"><a href="#">History</a></li>
-                    <li class="py-2"><a href="#">Our Team</a></li>
-                    <li class="py-2"><a href="#">Blog</a></li>
-                  </div>
+                    <div class="py-2"><a href="#">History</a></div>
+                    <div class="py-2"><a href="#">Our Team</a></div>
+                    <div class="py-2"><a href="#">Blog</a></div>
+                  </li>
                   <li class="my-4"><a href="#">Careers</a></li>
                   <li class="my-4"><a href="#">About</a></li>
                 </ul>
                 <ul class="desktop:mt-[-.5rem] mr-5">
-                  <div class="desktop:flex desktop:space-x-10">
-                    <li
+                  <li class="desktop:flex desktop:space-x-10">
+                    <span
                       class="flex justify-center my-4 desktop:my-0 desktop:space-x-4 desktop:items-center text-mediumGray"
                     >
                       <a href="#">Login</a>
-                    </li>
-                    <li>
+                    </span>
+                    <span>
                       <button
                         class="px-16 py-2 border-2 rounded-xl border-almostBlack desktop:px-6"
                       >
                         <span class="text-mediumGray">Register</span>
-                      </button>
-                    </li>
-                  </div>
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -320,7 +319,7 @@
         </div>
       </div>
 
-      <footer aria-hidden="true">
+      <footer>
         <div class="relative attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

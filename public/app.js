@@ -11,7 +11,7 @@ const body = document.querySelector("body");
 //  Menu Items
 const companyDiv = document.querySelector("#company-div");
 const companyButton = document.querySelector("#company-button");
-const featuresDiv = document.querySelector("#features-div");
+const featuresLI = document.querySelector("#features-li");
 const featuresButton = document.querySelector("#features-button");
 const companyDownArrow = document.querySelector("#company-down-arrow");
 const featuresDownArrow = document.querySelector("#features-down-arrow");
@@ -29,15 +29,15 @@ for (let i = 0; i < navButtons.length; i++) {
           : "true"
       );
 
-      if (!featuresDiv.classList.contains("hidden")) {
-        featuresDiv.classList.toggle("hidden");
+      if (!featuresLI.classList.contains("hidden")) {
+        featuresLI.classList.toggle("hidden");
         featuresDownArrow.classList.toggle("rotate-180");
         featuresButton.setAttribute("aria-expanded", "false");
       }
     }
 
     if (navButtons[i] === featuresButton) {
-      featuresDiv.classList.toggle("hidden");
+      featuresLI.classList.toggle("hidden");
       featuresDownArrow.classList.toggle("rotate-180");
 
       featuresButton.setAttribute(
@@ -77,25 +77,3 @@ closeButton.addEventListener("click", () => {
   closeButton.classList.toggle("hidden");
   body.style.background = "none";
 });
-
-// companyButton.addEventListener("click", () => {
-//   companyDiv.classList.toggle("hidden");
-//   companyDownArrow.classList.toggle("rotate-180");
-
-//   // Setting aria-expanded for accessibility
-//   companyButton.setAttribute(
-//     "aria-expanded",
-//     companyButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
-//   );
-// });
-
-// featuresButton.addEventListener("click", () => {
-//   featuresDiv.classList.toggle("hidden");
-//   featuresDownArrow.classList.toggle("rotate-180");
-
-//   // Setting aria-expanded for accessibility
-//   featuresButton.setAttribute(
-//     "aria-expanded",
-//     featuresButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
-//   );
-// });
