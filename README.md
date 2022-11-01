@@ -1,93 +1,143 @@
-# Frontend Mentor - Intro section with dropdown navigation
+# Frontend Mentor - Intro section with dropdown navigation solution
 
-![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+The Intro section with dropdown navigation challenge from Front End Mentor.
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this intro section with dropdown navigation and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](https://imgur.com/gm0Okt8)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [GitHub](https://github.com/thejackshelton/thejackshelton-Intro_section_with_dropdown_navigation)
+- Live Site URL: [Live Site](https://project-lemon-one.vercel.app/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+I started mobile first, and used one breakpoint for desktop at 1440px.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+I then used transition-x-full and a div to create my mobile menu.
 
-## Building your project
+After creating the menu, I added some toggles with dropdown divs using JS, and Grace from FEM had the idea to rotate the arrow icon instead of using both. I used a transition to animate the icon.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I wanted to spice things up where I could, so I added a quick hover animation over the logos. Instead of using flex, I chose to use grid on the logos so that they maintained the proper AR and fitted nicely on both mobile and desktop.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+On desktop, I gave both nav dropdown divs a position of absolute, and I implemented JS logic that toggles aria-expanded on open. If another nav is clicked then the open one will close and aria-expanded will be set to false.
 
-## Deploying your project
+I also set the parent div to display: block, in order to nest down and add flex in order to recreate the nav design for desktop. I also used justify-between in order to have login & register on the right side.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+I tried implementing an animation on the dropdown divs, and I reached out for help in the Tailwind Discord. After receiving help from a user named Wongjn (props to you), I realized that my toggle with tailwind's hidden class prevented me from using any sort of transition.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Instead, I used tailwind's invisible class, but it ended up affecting the mobile menu design in a way that wasn't practical to work around, so I ended up reverting it. It was probably a better decision, since I'd assume tailwind's invisible class likely affects accessibility, as it's not actually hidden.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+### Built with
 
-## Create a custom `README.md`
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Tailwind](https://tailwindcss.com/) - CSS Framework
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+### What I learned
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+I learned a ton of new tailwind classes that I hadn't used before. My menu div being an example of using translate-x along with transform transitions.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```html
+<div
+  class="z-20 absolute bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent desktop:w-full desktop:z-0"
+  id="open-menu"
+></div>
+```
 
-## Submitting your solution
+Here's the logic for my navigation!
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+```js
+for (let i = 0; i < navButtons.length; i++) {
+  navButtons[i].addEventListener("click", (e) => {
+    if (navButtons[i] === companyButton) {
+      companyDiv.classList.toggle("hidden");
+      companyDownArrow.classList.toggle("rotate-180");
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+      companyButton.setAttribute(
+        "aria-expanded",
+        companyButton.getAttribute("aria-expanded") === "true"
+          ? "false"
+          : "true"
+      );
 
-## Sharing your solution
+      if (!featuresDiv.classList.contains("hidden")) {
+        featuresDiv.classList.toggle("hidden");
+        featuresDownArrow.classList.toggle("rotate-180");
+        featuresButton.setAttribute("aria-expanded", "false");
+      }
+    }
 
-There are multiple places you can share your solution:
+    if (navButtons[i] === featuresButton) {
+      featuresDiv.classList.toggle("hidden");
+      featuresDownArrow.classList.toggle("rotate-180");
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+      featuresButton.setAttribute(
+        "aria-expanded",
+        featuresButton.getAttribute("aria-expanded") === "true"
+          ? "false"
+          : "true"
+      );
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+      if (!companyDiv.classList.contains("hidden")) {
+        companyDiv.classList.toggle("hidden");
+        companyDownArrow.classList.toggle("rotate-180");
+        companyButton.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+}
+```
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+### Continued development
 
-## Got feedback for us?
+With future projects, I want to continue using accesibility best practices, but I also want things to look smooth and professional as well!
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+I was a bit bummed out when I couldn't add a dropdown transition real easily unless it messed with the mobile version of the design, as well as the possibility of screen readers reading out my div when it's not visible by using the visibility: hidden; css property.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+### Useful resources
 
-**Have fun building!** 🚀
+- [Wind UI (Tailwind Component Library)](https://discord.gg/86tbnSWJ8e) - The team over at Wind-UI have done an amazing job at explaining how to use certain tailwind classes to me.
+- [W3 Schools](https://www.w3schools.com/) - I find that MDN tends to use complex vocabulary instead of just simply stating what something does. W3 Schools is a good resource and I like their examples and documentation.
+
+## Author
+
+- Website - [Jack Shelton](https://jackshelton.com)
+- Frontend Mentor - [@thejackshelton](https://www.frontendmentor.io/profile/thejackshelton)
+- Twitter - [@thejackshelton](https://www.twitter.com/thejackshelton)
+
+## Acknowledgments
+
+Huge special thanks to Grace & Alex from FEM for getting me on track with this challenge. Nav Bars of any kind using tailwind now seem so much more simple than before going into this challenge.
+
+Also a big thanks to Wongjn from Tailwind Labs, Christos, and Bot Fro from Wind UI for helping me out!
