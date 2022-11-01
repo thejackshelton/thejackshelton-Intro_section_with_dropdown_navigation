@@ -43,7 +43,7 @@
             alt="Logo"
             class="max-w-[84px] max-h-[27px]"
           />
-          <!-- Open -->
+          <!-- Mobile Menu -->
           <div>
             <button
               id="open-button"
@@ -51,23 +51,18 @@
               aria-label="open menu"
             >
               <img
-                aria-hidden="true"
                 src="./images/icon-menu.svg"
                 alt="open menu icon"
+                id="open-menu-icon"
               />
-              <button
-                class="relative z-20 hidden cursor-pointer"
-                id="close-button"
-                aria-label="close menu"
-              >
-                <img
-                  aria-hidden="true"
-                  src="./images/icon-close-menu.svg"
-                  alt="close menu icon"
-                />
-              </button>
+              <img
+                src="./images/icon-close-menu.svg"
+                class="hidden"
+                alt="close menu icon"
+                id="close-menu-icon"
+              />
             </button>
-            <!-- Close -->
+            <!-- Menu Div -->
             <div
               class="z-10 absolute bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent desktop:w-full desktop:z-0"
               id="open-menu"
@@ -85,7 +80,6 @@
                     >
                       <span>Features</span>
                       <svg
-                        aria-hidden="true"
                         id="features-down-arrow"
                         class="transition duration-300"
                         width="10"
@@ -107,7 +101,6 @@
                   >
                     <button class="flex items-center py-2 space-x-2">
                       <img
-                        aria-hidden="true"
                         src="./images/icon-todo.svg"
                         alt="Todo Icon"
                       />
@@ -115,7 +108,6 @@
                     </button>
                     <button class="flex items-center py-2 space-x-2">
                       <img
-                        aria-hidden="true"
                         src="./images/icon-calendar.svg"
                         alt=""
                       />
@@ -123,7 +115,6 @@
                     </button>
                     <button class="flex items-center py-2 space-x-2">
                       <img
-                        aria-hidden="true"
                         src="./images/icon-reminders.svg"
                         alt=""
                       />
@@ -131,7 +122,6 @@
                     </button>
                     <button class="flex items-center py-2 space-x-2">
                       <img
-                        aria-hidden="true"
                         src="./images/icon-planning.svg"
                         alt=""
                       />
@@ -145,7 +135,6 @@
                     >
                       <span>Company</span>
                       <svg
-                        aria-hidden="true"
                         id="company-down-arrow"
                         class="transition duration-300"
                         width="10"
@@ -160,14 +149,14 @@
                         />
                       </svg>
                     </button>
-                  </li>
-                  <li
+                    <li
                     class="hidden px-4 desktop:absolute desktop:bg-white desktop:mt-[3.5rem] desktop:left-[17rem] desktop:px-6 desktop:py-4 desktop:rounded-xl desktop:shadow-2xl"
                     id="company-div"
                   >
-                    <div class="py-2"><a href="#">History</a></div>
-                    <div class="py-2"><a href="#">Our Team</a></div>
-                    <div class="py-2"><a href="#">Blog</a></div>
+                      <div class="py-2"><a href="#">History</a></div>
+                      <div class="py-2"><a href="#">Our Team</a></div>
+                      <div class="py-2"><a href="#">Blog</a></div>
+                    </li>
                   </li>
                   <li class="my-4"><a href="#">Careers</a></li>
                   <li class="my-4"><a href="#">About</a></li>
