@@ -7,7 +7,7 @@ const openButton = document.querySelector("#open-button");
 const closeMenuIcon = document.querySelector("#close-menu-icon");
 const openMenuIcon = document.querySelector("#open-menu-icon");
 const openMenu = document.querySelector("#open-menu");
-const body = document.querySelector("body");
+const overlayDiv = document.querySelector("#overlay-div");
 
 //  Menu Items
 const companyDiv = document.querySelector("#company-div");
@@ -59,6 +59,7 @@ for (let i = 0; i < navButtons.length; i++) {
 
 openButton.addEventListener("click", () => {
   openMenu.classList.toggle("translate-x-full");
+  overlayDiv.classList.toggle("translate-x-[-100%]");
   closeMenuIcon.classList.toggle("hidden");
   openMenuIcon.classList.toggle("hidden");
 
@@ -67,18 +68,4 @@ openButton.addEventListener("click", () => {
     "aria-expanded",
     openButton.getAttribute("aria-expanded") === "true" ? "false" : "true"
   );
-
-  if (openButton.ariaExpanded) {
-    body.style.background = "rgba(0, 0, 0, 0.6)";
-    body.style.transition = "all .5s";
-  } else {
-    body.style.background = "none";
-  }
 });
-
-// closeMenuIcon.addEventListener("click", () => {
-//   openMenu.classList.toggle("translate-x-full");
-//   openButton.classList.toggle("hidden");
-//   closeMenuIcon.classList.toggle("hidden");
-//   body.style.background = "none";
-// });

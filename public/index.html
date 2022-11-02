@@ -49,6 +49,7 @@
               id="open-button"
               class="relative z-20 cursor-pointer desktop:hidden"
               aria-label="open menu"
+              aria-expanded="false"
             >
               <img
                 src="./images/icon-menu.svg"
@@ -62,9 +63,12 @@
                 id="close-menu-icon"
               />
             </button>
+            <!-- Overlay -->
+            <div id="overlay-div" class="absolute left-0 bottom-0 h-full w-[calc(100%-250px)] bg-almostBlack opacity-20 desktop:hidden translate-x-[-100%] transition-all duration-300">
+            </div>
             <!-- Menu Div -->
             <div
-              class="z-10 absolute bg-almostWhite p-4 h-full bottom-0 w-[250px] transition-transform duration-300 right-0 translate-x-full flex flex-col desktop:translate-x-0 desktop:bg-transparent desktop:w-full desktop:z-0"
+              class="absolute bottom-0 right-0 z-10 flex flex-col h-full p-4 transition-transform duration-300 translate-x-full bg-almostWhite desktop:translate-x-0 desktop:bg-transparent desktop:w-full desktop:z-0 w-[250px]"
               id="open-menu"
             >
               <div
@@ -77,6 +81,7 @@
                     <button
                       class="flex items-center my-4 space-x-4 cursor-pointer desktop:space-x-2"
                       id="features-button"
+                      aria-expanded="false"
                     >
                       <span>Features</span>
                       <svg
@@ -94,44 +99,45 @@
                         />
                       </svg>
                     </button>
-                  </li>
-                  <li
+                    <li
                     class="px-4 desktop:py-4 desktop:px-8 mt-[-.5rem] hidden desktop:absolute desktop:shadow-2xl desktop:rounded-xl desktop:mt-[3.5rem] desktop:left-[4rem] desktop:bg-white"
                     id="features-li"
-                  >
-                    <button class="flex items-center py-2 space-x-2">
-                      <img
-                        src="./images/icon-todo.svg"
-                        alt="Todo Icon"
-                      />
-                      <span>Todo List</span>
-                    </button>
-                    <button class="flex items-center py-2 space-x-2">
-                      <img
-                        src="./images/icon-calendar.svg"
-                        alt=""
-                      />
-                      <span>Calendar</span>
-                    </button>
-                    <button class="flex items-center py-2 space-x-2">
-                      <img
-                        src="./images/icon-reminders.svg"
-                        alt=""
-                      />
-                      <span>Reminders</span>
-                    </button>
-                    <button class="flex items-center py-2 space-x-2">
-                      <img
-                        src="./images/icon-planning.svg"
-                        alt=""
-                      />
-                      <span>Planning</span>
-                    </button>
+                    >
+                      <button class="flex items-center py-2 space-x-2">
+                        <img
+                          src="./images/icon-todo.svg"
+                          alt="Todo Icon"
+                        />
+                        <span>Todo List</span>
+                      </button>
+                      <button class="flex items-center py-2 space-x-2">
+                        <img
+                          src="./images/icon-calendar.svg"
+                          alt=""
+                        />
+                        <span>Calendar</span>
+                      </button>
+                      <button class="flex items-center py-2 space-x-2">
+                        <img
+                          src="./images/icon-reminders.svg"
+                          alt=""
+                        />
+                        <span>Reminders</span>
+                      </button>
+                      <button class="flex items-center py-2 space-x-2">
+                        <img
+                          src="./images/icon-planning.svg"
+                          alt=""
+                        />
+                        <span>Planning</span>
+                      </button>
+                    </li>
                   </li>
                   <li>
                     <button
                       class="flex items-center my-4 space-x-4 cursor-pointer desktop:space-x-2"
                       id="company-button"
+                      aria-expanded="false"
                     >
                       <span>Company</span>
                       <svg
@@ -152,7 +158,7 @@
                     <li
                     class="hidden px-4 desktop:absolute desktop:bg-white desktop:mt-[3.5rem] desktop:left-[17rem] desktop:px-6 desktop:py-4 desktop:rounded-xl desktop:shadow-2xl"
                     id="company-div"
-                  >
+                    >
                       <div class="py-2"><a href="#">History</a></div>
                       <div class="py-2"><a href="#">Our Team</a></div>
                       <div class="py-2"><a href="#">Blog</a></div>
