@@ -466,6 +466,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.invisible {
+  visibility: hidden;
+}
 .absolute {
   position: absolute;
 }
@@ -759,6 +762,10 @@ video {
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 @media (min-width: 1440px) {
+
+  .desktop\:visible {
+    visibility: visible;
+  }
 
   .desktop\:absolute {
     position: absolute;

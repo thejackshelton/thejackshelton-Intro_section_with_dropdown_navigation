@@ -59,6 +59,7 @@ for (let i = 0; i < navButtons.length; i++) {
 
 openButton.addEventListener("click", () => {
   openMenu.classList.toggle("translate-x-full");
+  openMenu.classList.toggle("invisible");
   overlayDiv.classList.toggle("translate-x-[-100%]");
   closeMenuIcon.classList.toggle("hidden");
   openMenuIcon.classList.toggle("hidden");
